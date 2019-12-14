@@ -30,13 +30,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+The DOM is an object representation of the HTML.
+
 2. What is an event?
+
+An event is any action input performed by the user.
 
 3. What is an event listener?
 
+An event listener is a programmed response to any event.
+
 4. Why would we convert a NodeList into an Array?
 
+NodeLists are converted into arrays in order to access array features and methods like forEach.
+
 5. What is a component?
+
+A component is a reusable set of information.
 
 ### Git Set up
 
