@@ -19,3 +19,14 @@ axios.get('https://lambda-times-backend.herokuapp.com/topics')
     .catch(err => {
         console.log('Error:', err);
     })
+
+let topics = document.querySelector('.topics');
+
+function tabCreator(tabTitle){
+    let divTab = document.createElement('div');
+    divTab.classList.add('tab');
+    divTab.textContent = tabTitle;
+
+    console.log(divTab);
+    return divTab;
+}
