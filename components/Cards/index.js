@@ -21,9 +21,13 @@
 axios.get('https://lambda-times-backend.herokuapp.com/articles')
     .then(response => {
         console.log(response);
-        const cardArticles = Object.keys(response.data.articles).forEach(cardComponent(item));
-        cardsContainer.appendChild(cardArticles);
-        console.log(cardArticles);
+        const cardArticles = Object.entries(response.data.articles); // Need array --> array --> object --> item.
+            cardArticles.map(article => {
+                article[1].map(item => {
+                    cardsContainer.appendChild(cardComponent(item));
+                });
+            console.log(cardArticles);
+            });
     })
     .catch(err => {
         console.log('Error:', err);
@@ -33,6 +37,10 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
         //     cardsContainer.appendChild(cardArticles);
         //     console.log(cardArticles);
         // });
+
+        // const cardArticles = Object.keys(response.data.articles).forEach(cardComponent(item));
+        // cardsContainer.appendChild(cardArticles);
+        // console.log(cardArticles);
 
 let cardsContainer = document.querySelector('.cards-container');
 
